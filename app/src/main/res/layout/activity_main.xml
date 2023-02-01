@@ -60,22 +60,23 @@
                     android:layout_height="120dp"
                     android:layout_marginTop="20dp"
                     android:layout_weight="1"
-
-                    />
+                    android:tag="1"/>
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/qator1_joy2"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_marginTop="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:tag="2"/>
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/qator1_joy3"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_marginTop="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:tag="3"/>
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -92,7 +93,7 @@
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_marginTop="20dp"
-
+                    android:tag="4"
                     android:layout_weight="1" />
 
                 <com.google.android.material.imageview.ShapeableImageView
@@ -100,14 +101,16 @@
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_marginTop="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:tag="5"/>
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/qator2_joy3"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_marginTop="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:tag="6"/>
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -124,21 +127,24 @@
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_marginTop="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:tag="7"/>
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/qator3_joy2"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_marginTop="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:tag="8"/>
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/qator3_joy3"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_marginTop="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:tag="9"/>
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
