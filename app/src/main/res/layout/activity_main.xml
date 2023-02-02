@@ -49,32 +49,31 @@
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="3">
+                android:orientation="horizontal">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/qator1_joy1"
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="37dp"
                     android:layout_weight="1"
                     android:tag="1"/>
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/qator1_joy2"
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="37dp"
                     android:layout_weight="1"
                     android:tag="2"/>
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/qator1_joy3"
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="37dp"
                     android:layout_weight="1"
                     android:tag="3"/>
 
@@ -83,15 +82,14 @@
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="3">
+                android:orientation="horizontal">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/qator2_joy1"
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
                     android:tag="4"
                     android:layout_weight="1" />
@@ -99,7 +97,7 @@
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/qator2_joy2"
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
                     android:layout_weight="1"
                     android:tag="5"/>
@@ -107,7 +105,7 @@
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/qator2_joy3"
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
                     android:layout_weight="1"
                     android:tag="6"/>
@@ -117,32 +115,28 @@
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="00dp"
                 android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="3">
+                android:orientation="horizontal">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/qator3_joy1"
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
                     android:tag="7"/>
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/qator3_joy2"
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
                     android:tag="8"/>
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/qator3_joy3"
                     android:layout_width="0dp"
-                    android:layout_height="120dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
                     android:tag="9"/>
 
@@ -155,16 +149,32 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:background="@drawable/back"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:background="@drawable/playturnbackground"
+        android:gravity="center"
         android:text="Player X"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/playagain"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:text="play again"
+        android:textStyle="bold|italic"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        app:cornerRadius="30dp"
+        android:visibility="invisible"
+        android:backgroundTint="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
