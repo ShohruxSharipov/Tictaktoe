@@ -6,10 +6,13 @@ import android.util.Log
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity(),OnClickListener {
+//    val intent2 = getIntent()
+
     lateinit var playerturn : TextView
     lateinit var first: ImageView
     lateinit var second: ImageView
@@ -21,6 +24,9 @@ class MainActivity : AppCompatActivity(),OnClickListener {
     lateinit var eighth: ImageView
     lateinit var nineth: ImageView
     lateinit var playag: Button
+//     var namex = intent2.getStringExtra("namex")
+//     var nameo = intent2.getStringExtra("nameo")
+
      var check: Boolean = true
     var matrix = Array(3){IntArray(3){-1} }
     var col:Int = 2
@@ -41,6 +47,7 @@ class MainActivity : AppCompatActivity(),OnClickListener {
         playerturn = findViewById<TextView>(R.id.textView)
         playag = findViewById(R.id.playagain)
 
+//        playerturn.text = "xname"
         first.setOnClickListener(this)
         second.setOnClickListener(this)
         third.setOnClickListener(this)
@@ -72,7 +79,7 @@ class MainActivity : AppCompatActivity(),OnClickListener {
             eighth.isEnabled = true
             nineth.isEnabled = true
             playag.visibility = View.INVISIBLE
-            playerturn.text = "Player X"
+            playerturn.text = "xname"
             amount = 0
         }
 
@@ -87,7 +94,7 @@ var amount = 0
             if (check) {
                 a.setBackgroundResource(R.drawable.img_2)
                 check = false
-                playerturn.text = "Player O"
+                playerturn.text = "oname"
                 matrix[row][col] = 1
                 game(col, row, 1)
 
@@ -95,7 +102,7 @@ var amount = 0
             } else {
                 a.setBackgroundResource(R.drawable.img_1)
                 check = true
-                playerturn.text = "Player X"
+                playerturn.text = "xname"
                 matrix[row][col] = 0
                 game(col, row, 0)
             }
@@ -177,9 +184,9 @@ var amount = 0
         nineth.isEnabled = false
         count = 0
         if (a == 1){
-        playerturn.text = "Player X won"}
+        playerturn.text = "xname"+" is winner"}
         else if (a==3){playerturn.text = "Draw"}
-        else {playerturn.text = "Player O won"}
+        else {playerturn.text = "oname" + " is winner"}
 
         playag.visibility = View.VISIBLE
     }

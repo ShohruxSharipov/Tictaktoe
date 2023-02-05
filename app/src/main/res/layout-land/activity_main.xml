@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/back">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/img" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/qator1_joy1"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:tag="1" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/qator1_joy2"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="00dp"
+                    android:layout_weight="1"
+                    android:tag="2" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/qator1_joy3"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="00dp"
+                    android:layout_weight="1"
+                    android:tag="3" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/qator2_joy1"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:tag="4" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/qator2_joy2"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:tag="5" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/qator2_joy3"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:tag="6" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="00dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/qator3_joy1"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:tag="7" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/qator3_joy2"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:tag="8" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/qator3_joy3"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:tag="9" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:background="@drawable/playturnbackground"
+        android:gravity="center"
+        android:text="Player X"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/playagain"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="play again"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:textStyle="bold|italic"
+        android:visibility="invisible"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toStartOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
