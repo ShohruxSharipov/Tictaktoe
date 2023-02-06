@@ -4,9 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/back">
+    tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView2"
@@ -17,7 +21,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img" />
+        app:srcCompat="@drawable/backgroundfone" />
+
+
 
 
     <androidx.cardview.widget.CardView
@@ -39,7 +45,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/img" />
+            app:srcCompat="@drawable/backgroundfone" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -77,6 +83,12 @@
                     android:layout_weight="1"
                     android:tag="3"/>
 
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider" />
+
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -109,6 +121,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_weight="1"
                     android:tag="6"/>
+
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -154,6 +167,7 @@
         android:background="@drawable/playturnbackground"
         android:gravity="center"
         android:text="Player X"
+        android:fontFamily="@font/font"
         android:textColor="@color/black"
         android:textSize="25dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
@@ -161,20 +175,89 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/playagain"
-        android:layout_width="160dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:text="play again"
-        android:textStyle="bold|italic"
-        android:textColor="#000000"
-        android:textSize="25dp"
-        app:cornerRadius="30dp"
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/winercard"
+        android:layout_width="370dp"
+        android:layout_height="500dp"
+        android:backgroundTint="#E2000000"
+        app:cardCornerRadius="30dp"
         android:visibility="invisible"
-        android:backgroundTint="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintStart_toStartOf="@+id/cardView"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintTop_toTopOf="@+id/cardView">
 
+        <TextView
+            android:id="@+id/winner"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="WINNER"
+            android:fontFamily="@font/font"
+            android:layout_gravity="center|top"
+            android:textColor="@color/white"
+            android:textSize="40sp"></TextView>
+        <TextView
+            android:id="@+id/playerf"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Player X"
+            android:fontFamily="@font/font"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/white"
+            android:textSize="30sp"/>
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="250dp"
+            android:background="@drawable/line"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"/>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="5dp"
+            android:background="@drawable/line"
+            android:layout_gravity="center"
+            android:layout_marginBottom="100dp"/>
+        <TextView
+            android:id="@+id/players"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Player O"
+            android:fontFamily="@font/font"
+            android:layout_gravity="end"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/white"
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/playerfcount"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:text="0"
+            android:fontFamily="@font/font"
+            android:layout_marginTop="170dp"
+            android:layout_marginStart="80dp"
+            android:textColor="@color/white"
+            android:textSize="50sp"/>
+        <TextView
+            android:id="@+id/playerscount"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:text="O"
+            android:fontFamily="@font/font"
+            android:layout_gravity="end"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="80dp"
+            android:textColor="@color/white"
+            android:textSize="50sp"/>
+
+        <ImageButton
+            android:id="@+id/playagain"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom|center"
+            app:srcCompat="@drawable/ic_baseline_restart_alt_24"
+            android:background="#00FFFFFF"/>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

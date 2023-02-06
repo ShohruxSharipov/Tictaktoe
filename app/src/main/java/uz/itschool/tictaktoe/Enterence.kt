@@ -24,24 +24,19 @@ class Enterence : AppCompatActivity() {
         start = findViewById(R.id.Start)
         nameX = findViewById(R.id.playerx)
         nameO = findViewById(R.id.playero)
+
         start.setOnClickListener {
-Log.d("log","jk")
-            var intent = Intent(this@Enterence,MainActivity::class.java).also {
-            it.putExtra("namex",namex)
-            it.putExtra("nameo",nameo)
+
+            namex = nameX.text.toString()
+            nameo = nameO.text.toString()
+
+            var intent = Intent(this,MainActivity::class.java).also {
+                it.putExtra("NAME_X",namex)
+                it.putExtra("NAME_O",nameo)
                 startActivity(it)
-        }
+            }
         }
     }
 
-//    fun sendData(){
-//        nameo = nameO.text.toString()
-//        namex = nameX.text.toString()
-//
-//
-//
-//        Log.d("tag",namex+ "    $nameo")
-//
-//
-//    }
+
 }

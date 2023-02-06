@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img" />
+        app:srcCompat="@drawable/backgroundfone" />
 
 
     <androidx.cardview.widget.CardView
@@ -38,7 +38,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/img" />
+            app:srcCompat="@drawable/backgroundfone" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -156,25 +156,41 @@
         android:background="@drawable/playturnbackground"
         android:gravity="center"
         android:text="Player X"
+        android:fontFamily="@font/font"
         android:textColor="@color/black"
         android:textSize="25dp"
         app:layout_constraintEnd_toStartOf="@+id/cardView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardView" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/playagain"
-        android:layout_width="160dp"
-        android:layout_height="55dp"
-        android:backgroundTint="@color/teal_200"
-        android:text="play again"
-        android:textColor="#000000"
-        android:textSize="25dp"
-        android:textStyle="bold|italic"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/winercard"
+        android:layout_width="270dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="-55dp"
+        android:backgroundTint="#E2000000"
         android:visibility="invisible"
-        app:cornerRadius="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cardView"
-        app:layout_constraintEnd_toStartOf="@+id/cardView"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="WINNER"
+            android:fontFamily="@font/font"
+            android:layout_gravity="center|top"
+            android:textColor="@color/white"
+            android:textSize="40sp"></TextView>
+
+        <ImageButton
+            android:id="@+id/playagain"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#00FFFFFF"
+            android:layout_gravity="bottom|center"
+            app:srcCompat="@drawable/ic_baseline_restart_alt_24" />
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
