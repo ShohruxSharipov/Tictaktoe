@@ -16,7 +16,7 @@ class Enterence : AppCompatActivity() {
     lateinit var namex: String
     lateinit var nameo: String
 
-    lateinit var start:Button
+    lateinit var start: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,14 +25,10 @@ class Enterence : AppCompatActivity() {
         nameX = findViewById(R.id.playerx)
         nameO = findViewById(R.id.playero)
         start.setOnClickListener {
-Log.d("log","jk")
-            var intent = Intent(this@Enterence,MainActivity::class.java).also {
-            it.putExtra("namex",namex)
-            it.putExtra("nameo",nameo)
-                startActivity(it)
-        }
-        }
-    }
+            Log.d("log", "jk")
+            var intent = Intent(this, MainActivity::class.java)
+
+            startActivity(intent)
 
 //    fun sendData(){
 //        nameo = nameO.text.toString()
@@ -44,4 +40,6 @@ Log.d("log","jk")
 //
 //
 //    }
+        }
+    }
 }
