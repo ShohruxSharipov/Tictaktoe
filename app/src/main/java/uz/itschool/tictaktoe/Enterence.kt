@@ -30,16 +30,7 @@ class Enterence : AppCompatActivity() {
 
             startActivity(intent)
 
-//    fun sendData(){
-//        nameo = nameO.text.toString()
-//        namex = nameX.text.toString()
-//
-//
-//
-//        Log.d("tag",namex+ "    $nameo")
-//
-//
-//    }
+
         }
     }
 }
